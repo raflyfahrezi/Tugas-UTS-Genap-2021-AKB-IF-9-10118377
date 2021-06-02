@@ -10,4 +10,5 @@
 
     <!-- My Color -->
     <color name="my_black">#000000</color>
+    <color name="my_secondary_black">#333333</color>
 </resources>
