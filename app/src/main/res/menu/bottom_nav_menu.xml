@@ -12,7 +12,7 @@
         android:title="@string/title_task" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_info"
         android:icon="@drawable/ic_info"
         android:title="@string/title_info" />
 
