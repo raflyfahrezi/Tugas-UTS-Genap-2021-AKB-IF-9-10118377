@@ -1,7 +1,8 @@
-package com.example.uts_akb_if9_10118377;
+package com.example.uts_akb_if9_10118377.main;
 
 import android.os.Bundle;
 
+import com.example.uts_akb_if9_10118377.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
