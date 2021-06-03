@@ -17,4 +17,8 @@
     <style name="myBody">
         <item name="android:background">@color/my_black</item>
     </style>
+
+    <style name="myTextPrimary">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
 </resources>
