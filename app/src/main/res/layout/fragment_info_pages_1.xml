@@ -3,11 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:padding="50dp"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Page 1" />
+        android:text="Bingung mau menulis catatan harian dimana ?"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        style="@style/myTextPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe >"
+        android:textSize="16dp"
+        android:layout_marginTop="50dp"
+        style="@style/myTextPrimary"/>
 
 </LinearLayout>
