@@ -1,13 +1,16 @@
 package com.example.uts_akb_if9_10118377.main.menu.task;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.uts_akb_if9_10118377.R;
+import com.example.uts_akb_if9_10118377.editTask.EditTaskActivity;
 import com.example.uts_akb_if9_10118377.model.Task;
 
 import java.util.List;
@@ -15,10 +18,8 @@ import java.util.List;
 public class ListViewAdapter extends BaseAdapter {
     private List<Task> listTask;
     private Context context;
-    private TextView judul;
-    private TextView date;
-    private TextView kategori;
-    private TextView isi;
+    private TextView judul, date, kategori, isi;
+    private Button editButton, deleteButton;
 
     public ListViewAdapter(List<Task> listTask, Context context) {
         this.listTask = listTask;
@@ -48,11 +49,26 @@ public class ListViewAdapter extends BaseAdapter {
         date = view.findViewById(R.id.cardDate);
         kategori = view.findViewById(R.id.cardKategori);
         isi = view.findViewById(R.id.cardIsi);
+        editButton = view.findViewById(R.id.editButton);
 
         judul.setText(listTask.get(position).getJudul());
         date.setText(listTask.get(position).getDate());
         kategori.setText(listTask.get(position).getKategori());
         isi.setText(listTask.get(position).getIsi());
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, EditTaskActivity.class);
+                intent.putExtra("Id", listTask.get(position).getId());
+                intent.putExtra("Judul", listTask.get(position).getJudul());
+                intent.putExtra("Date", listTask.get(position).getDate());
+                intent.putExtra("Kategori", listTask.get(position).getKategori());
+                intent.putExtra("Isi", listTask.get(position).getIsi());
+
+                context.startActivity(intent);
+            }
+        });
 
         return view;
     }
