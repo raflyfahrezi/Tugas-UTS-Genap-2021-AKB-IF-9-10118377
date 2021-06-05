@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.uts_akb_if9_10118377.R;
+import com.example.uts_akb_if9_10118377.deleteTask.DeleteTaskActivity;
 import com.example.uts_akb_if9_10118377.editTask.EditTaskActivity;
 import com.example.uts_akb_if9_10118377.model.Task;
 
@@ -50,6 +51,7 @@ public class ListViewAdapter extends BaseAdapter {
         kategori = view.findViewById(R.id.cardKategori);
         isi = view.findViewById(R.id.cardIsi);
         editButton = view.findViewById(R.id.editButton);
+        deleteButton = view.findViewById(R.id.deleteButton);
 
         judul.setText(listTask.get(position).getJudul());
         date.setText(listTask.get(position).getDate());
@@ -65,6 +67,16 @@ public class ListViewAdapter extends BaseAdapter {
                 intent.putExtra("Date", listTask.get(position).getDate());
                 intent.putExtra("Kategori", listTask.get(position).getKategori());
                 intent.putExtra("Isi", listTask.get(position).getIsi());
+
+                context.startActivity(intent);
+            }
+        });
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DeleteTaskActivity.class);
+                intent.putExtra("Id", listTask.get(position).getId());
 
                 context.startActivity(intent);
             }
