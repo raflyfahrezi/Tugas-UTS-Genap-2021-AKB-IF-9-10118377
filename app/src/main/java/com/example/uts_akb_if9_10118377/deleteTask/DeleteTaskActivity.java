@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.uts_akb_if9_10118377.R;
+
 public class DeleteTaskActivity extends AppCompatActivity {
 
     @Override
