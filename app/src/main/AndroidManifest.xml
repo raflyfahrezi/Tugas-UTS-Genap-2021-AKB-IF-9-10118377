@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UTS_AKB_IF9_10118377">
-        <activity android:name=".editTask.EditActivity"></activity>
-        <activity android:name=".createTask.CreateTaskActivity" />
+        <activity
+            android:name=".editTask.EditTaskActivity"
+            android:label="Edit Task"/>
+        <activity
+            android:name=".createTask.CreateTaskActivity"
+            android:label="Create Task"/>
         <activity
             android:name=".splash.SplashActivity"
             android:label="@string/app_name">
