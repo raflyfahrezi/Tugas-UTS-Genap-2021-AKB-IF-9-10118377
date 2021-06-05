@@ -33,6 +33,8 @@ public class TaskFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_task, container, false);
 
         addButton = root.findViewById(R.id.addButton);
+        listView = root.findViewById(R.id.listView);
+
         helper = new SQLite(this.getActivity());
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +44,7 @@ public class TaskFragment extends Fragment {
             }
         });
 
+        showData();
 
         return root;
     }
@@ -52,10 +55,10 @@ public class TaskFragment extends Fragment {
         Cursor res = helper.getAllData();
         while (res.moveToNext()) {
             String id = res.getString(0);
-            String judul = res.getString(0);
-            String date = res.getString(0);
-            String kategori = res.getString(0);
-            String isi = res.getString(0);
+            String judul = res.getString(1);
+            String date = res.getString(2);
+            String kategori = res.getString(3);
+            String isi = res.getString(4);
 
             listTask.add(new Task(id, judul, kategori, date, isi));
         }
