@@ -25,4 +25,13 @@
     <style name="myTextSecondary">
         <item name="android:textColor">@color/secondaryTextColor</item>
     </style>
+
+    <style name="myEditTextPrimary">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColorHint">@color/secondaryTextColor</item>
+    </style>
 </resources>
