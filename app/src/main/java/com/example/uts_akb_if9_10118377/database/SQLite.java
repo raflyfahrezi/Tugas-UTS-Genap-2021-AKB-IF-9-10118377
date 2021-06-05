@@ -71,4 +71,9 @@ public class SQLite extends SQLiteOpenHelper {
 
         return  db.rawQuery("SELECT * FROM " + TABLE, null);
     }
+
+    public Integer deteleData(String id){
+        SQLiteDatabase db = getWritableDatabase();
+        return db.delete(TABLE, COL_1 + " = ? ", new String[]{id});
+    }
 }
