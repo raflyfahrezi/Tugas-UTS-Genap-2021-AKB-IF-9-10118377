@@ -61,11 +61,9 @@ public class SQLite extends SQLiteOpenHelper {
         contentValues.put(COL_4, isi);
         contentValues.put(COL_5, date);
 
-        db.update(TABLE, contentValues, COL_1 + " = ? ", new String[]{
-                id
-        });
+        long results = db.update(TABLE, contentValues, COL_1 + " = ? ", new String[]{id});
 
-        return true;
+        return results != -1;
     }
 
     public Cursor getAllData() {
