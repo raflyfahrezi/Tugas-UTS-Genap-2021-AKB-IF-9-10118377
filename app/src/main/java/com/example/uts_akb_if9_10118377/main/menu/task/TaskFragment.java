@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.ListView;
 
 import com.example.uts_akb_if9_10118377.R;
 import com.example.uts_akb_if9_10118377.createTask.CreateTaskActivity;
+import com.example.uts_akb_if9_10118377.database.SQLite;
 import com.example.uts_akb_if9_10118377.model.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -23,6 +25,7 @@ public class TaskFragment extends Fragment {
     private ListView listView;
     private ListViewAdapter listViewAdapter;
     private ArrayList<Task> listTask = new ArrayList<>();
+    private SQLite helper;
 
     @Nullable
     @Override
@@ -30,6 +33,7 @@ public class TaskFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_task, container, false);
 
         addButton = root.findViewById(R.id.addButton);
+        helper = new SQLite(this.getActivity());
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +44,23 @@ public class TaskFragment extends Fragment {
 
 
         return root;
+    }
+
+    public void showData() {
+        listTask.clear();
+
+        Cursor res = helper.getAllData();
+        while (res.moveToNext()) {
+            String id = res.getString(0);
+            String judul = res.getString(0);
+            String date = res.getString(0);
+            String kategori = res.getString(0);
+            String isi = res.getString(0);
+
+            listTask.add(new Task(id, judul, kategori, date, isi));
+        }
+
+        listViewAdapter = new ListViewAdapter(listTask, getActivity());
+        listView.setAdapter(listViewAdapter);
     }
 }

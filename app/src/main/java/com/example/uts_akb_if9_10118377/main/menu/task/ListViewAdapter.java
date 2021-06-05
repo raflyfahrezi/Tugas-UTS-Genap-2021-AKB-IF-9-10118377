@@ -5,19 +5,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class ListViewAdapter extends BaseAdapter {
-    private String[] judul;
-    private String[] date;
-    private String[] kategori;
-    private String[] isi;
+import com.example.uts_akb_if9_10118377.model.Task;
 
+import java.util.List;
+
+public class ListViewAdapter extends BaseAdapter {
+    private List<Task> listTask;
     private Context context;
 
-    public ListViewAdapter(String[] judul, String[] date, String[] kategori, String[] isi, Context context) {
-        this.judul = judul;
-        this.date = date;
-        this.kategori = kategori;
-        this.isi = isi;
+    public ListViewAdapter(List<Task> listTask, Context context) {
+        this.listTask = listTask;
         this.context = context;
     }
 

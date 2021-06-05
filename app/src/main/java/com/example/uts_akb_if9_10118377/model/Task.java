@@ -3,12 +3,14 @@ package com.example.uts_akb_if9_10118377.model;
 public class Task {
     private String id;
     private String judul;
+    private String kategori;
     private String date;
     private String isi;
 
-    public Task(String id, String judul, String date, String isi) {
+    public Task(String id, String judul, String kategori, String date, String isi) {
         this.id = id;
         this.judul = judul;
+        this.kategori = kategori;
         this.date = date;
         this.isi = isi;
     }
@@ -19,6 +21,14 @@ public class Task {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 
     public String getJudul() {
