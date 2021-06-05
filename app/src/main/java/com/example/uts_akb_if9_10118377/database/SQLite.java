@@ -16,7 +16,7 @@ public class SQLite extends SQLiteOpenHelper {
     private static final String COL_4 = "isi";
     private static final String COL_5 = "date";
 
-    public SQLite(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public SQLite(@Nullable Context context) {
         super(context, DATABASE, null, 1);
     }
 
@@ -36,7 +36,7 @@ public class SQLite extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE);
     }
 
-    private boolean insertData(String judul, String kategori, String isi, String date) {
+    public boolean insertData(String judul, String kategori, String isi, String date) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
