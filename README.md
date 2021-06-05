@@ -1,4 +1,4 @@
-# Tugas UTS Genap 2021 AKB IF-9 10118377
+## Tugas UTS Genap 2021 AKB IF-9 10118377
 
 ### Identitas Diri
 - NIM : 10118377
@@ -14,5 +14,5 @@
 5. Edit Activity
 6. Delte Activity
 
-# Demo
+## Demo
 Coming Soon :)
