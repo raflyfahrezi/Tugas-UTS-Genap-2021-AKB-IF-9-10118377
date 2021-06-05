@@ -33,7 +33,7 @@ public class CreateTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_form_task);
 
         date = Calendar.getInstance().getTime();
-        dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+        dateFormat = new SimpleDateFormat("dd MM yyyy", Locale.getDefault());
 
         submitButton = findViewById(R.id.submitButton);
         judulEditText = findViewById(R.id.judul);
