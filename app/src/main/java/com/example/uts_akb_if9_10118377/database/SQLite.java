@@ -51,6 +51,23 @@ public class SQLite extends SQLiteOpenHelper {
         return results != -1;
     }
 
+    public boolean updateData(String id, String judul, String kategori, String isi, String date) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_1, id);
+        contentValues.put(COL_2, judul);
+        contentValues.put(COL_3, kategori);
+        contentValues.put(COL_4, isi);
+        contentValues.put(COL_5, date);
+
+        db.update(TABLE, contentValues, COL_1 + " = ? ", new String[]{
+                id
+        });
+
+        return true;
+    }
+
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
 
