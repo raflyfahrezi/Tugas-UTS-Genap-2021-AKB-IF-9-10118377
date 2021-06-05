@@ -57,8 +57,8 @@ public class TaskFragment extends Fragment {
             String id = res.getString(0);
             String judul = res.getString(1);
             String kategori = res.getString(2);
-            String date = res.getString(3);
-            String isi = res.getString(4);
+            String date = res.getString(4);
+            String isi = res.getString(3);
 
             listTask.add(new Task(id, judul, kategori, date, isi));
         }
