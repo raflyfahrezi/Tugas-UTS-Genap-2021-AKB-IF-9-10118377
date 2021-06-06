@@ -81,12 +81,12 @@ public class EditTaskActivity extends AppCompatActivity {
                     boolean isSuccess = helper.updateData(id, judul, kategori, isi, formattedDate);
 
                     if (isSuccess) {
-                        Toast.makeText(EditTaskActivity.this, "Data has been added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditTaskActivity.this, "Data has been updated", Toast.LENGTH_SHORT).show();
 
                         startActivity(new Intent(EditTaskActivity.this, MainActivity.class));
                         finish();
                     } else {
-                        Toast.makeText(EditTaskActivity.this, "Data failed to save", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditTaskActivity.this, "Data failed to update", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
