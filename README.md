@@ -20,3 +20,4 @@ Coming Soon :)
 ## Tested on
 - Samsung M20
 - Genymotion Emulator Google Pixel 4 - Android 10 - API 29
+- AVD Google Pixel 4 XL -  Android 11 - API 30
