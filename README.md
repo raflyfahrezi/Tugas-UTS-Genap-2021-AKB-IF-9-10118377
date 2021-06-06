@@ -9,10 +9,9 @@
 ### List Activity
 1. Splash Activity
 2. Main Activity
-3. Info Activity
-4. Create Activity
-5. Edit Activity
-6. Delte Activity
+3. Create Activity
+4. Edit Activity
+5. Delete Activity
 
 ## Demo
 - [Splash Screen and Main Activity](https://firebasestorage.googleapis.com/v0/b/data-center-production.appspot.com/o/random%2FMain.mp4?alt=media&token=95fac4f8-80b3-4d78-a7a4-4e610f024209)
